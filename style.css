@@ -1,0 +1,322 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    height: 100vh;
+    width: 100%;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.main #main-heading{
+    font-size: 3.5vw;
+    font-weight: 800;
+    color: #00ACC1;
+}
+
+.main #sub-heading{
+    font-size: 1.2vw;
+    font-weight: 700;
+    color: #00ACC1;
+    display: flex;
+    justify-content: center;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.sub-boxes{
+    height: 6rem;
+    width: 12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, #00ACC1 0px 4px 6px -2px;
+    border-radius: 5px;
+    color: #00ACC1;
+    cursor: pointer;
+}
+
+#research{
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+#research .research-tooltip{
+    visibility: hidden;
+    width: 15rem;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 1rem;
+    color: #000;
+    border: 2px solid #00ACC1;
+    border-radius: 5px;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    margin-left: -120px;
+    z-index: 1;
+}
+
+#research:hover{
+    background-color: #01bfd8;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+#research:hover .research-tooltip{
+    visibility: visible;
+}
+
+#planning{
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+#planning .planning-tooltip{
+    visibility: hidden;
+    width: 15rem;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 1rem;
+    color: #000;
+    border: 2px solid #00ACC1;
+    border-radius: 5px;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    margin-left: -120px;
+    z-index: 1;
+}
+
+#planning:hover{
+    background-color: #01bfd8;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+#planning:hover .planning-tooltip{
+    visibility: visible;
+}
+
+#desiging{
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+#desiging .desiging-tooltip{
+    visibility: hidden;
+    width: 15rem;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 1rem;
+    color: #000;
+    border: 2px solid #00ACC1;
+    border-radius: 5px;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    margin-left: -120px;
+    z-index: 1;
+}
+
+#desiging:hover{
+    background-color: #01bfd8;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+#desiging:hover .desiging-tooltip{
+    visibility: visible;
+}
+
+#manufacturing{
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+#manufacturing .manufacturing-tooltip{
+    visibility: hidden;
+    width: 15rem;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 1rem;
+    color: #000;
+    border: 2px solid #00ACC1;
+    border-radius: 5px;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    margin-left: -120px;
+    z-index: 1;
+}
+
+#manufacturing:hover{
+    background-color: #01bfd8;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+#manufacturing:hover .manufacturing-tooltip{
+    visibility: visible;
+}
+
+#marketing{
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+#marketing .marketing-tooltip{
+    visibility: hidden;
+    width: 15rem;
+    padding: 10px 15px;
+    text-align: center;
+    font-size: 1rem;
+    color: #000;
+    border: 2px solid #00ACC1;
+    border-radius: 5px;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    margin-left: -120px;
+    z-index: 1;
+}
+
+#marketing:hover{
+    background-color: #01bfd8;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+#marketing:hover .marketing-tooltip{
+    visibility: visible;
+}
+
+.modal-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+
+.modal-container{
+    position: relative;
+    width: 50%;
+    height: 65vh;
+    background-color: #fff;
+    padding: 10px 30px;
+}
+
+.modal-container button.close-button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.modal-container button.close-button:hover{
+    color: #00ACC1;
+    font-size: 1.8rem;
+}
+
+.modal-container p{
+    line-height: 1.6;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.modal-container ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-container ul li{
+    list-style: none;
+    color: #00ACC1;
+    font-size: 1.3rem;
+}
+
+.active{
+    visibility: visible;
+}
+
+@media (max-width:700px){
+    body{
+        height: 100%;
+        width: 100%;
+    }
+
+    .main #main-heading{
+        font-size: 5.5vw;
+    }
+
+    .main #sub-heading{
+        font-size: 2.6vw;
+        width: 90%;
+        text-align: center;
+    }
+
+    .sub-boxes{
+        font-size: 3.5vw;
+        
+    }
+    #research:hover .research-tooltip{
+        visibility: hidden;
+    }
+
+    #planning:hover .planning-tooltip{
+        visibility: hidden;
+    }
+
+    #desiging:hover .desiging-tooltip{
+        visibility: hidden;
+    }
+
+    #manufacturing:hover .manufacturing-tooltip{
+        visibility: hidden;
+    }
+
+    #marketing:hover .marketing-tooltip{
+        visibility: hidden;
+    }
+
+    .modal-container{
+        width: 85%;
+        height: 55vh;
+    }
+
+    .modal-container p{
+        line-height: 1.6;
+        font-size: 3.5vw;
+    }
+
+    .modal-container ul li{
+        font-size: 3.8vw;
+    }
+}
